@@ -1,0 +1,79 @@
+/* Custom Styles & Animation Enhancements */
+
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
+header {
+  padding-top: calc(0.75rem + var(--sat));
+}
+
+body {
+  padding-bottom: calc(6rem + var(--sab));
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Category Button active states */
+.category-btn {
+  transition: all 0.15s ease-in-out;
+}
+.category-btn.active {
+  background-color: #1e293b !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.4);
+  transform: scale(1.02);
+}
+
+/* Nav Tabs */
+.nav-tab.active {
+  background-color: #1e293b;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Filter buttons */
+.filter-btn.active {
+  background-color: #1e293b;
+  color: #38bdf8;
+}
+
+/* Modal animation helper */
+.modal.open {
+  display: flex !important;
+  opacity: 1;
+}
+.modal.open .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+/* Pulse indicator animation */
+@keyframes syncPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.9); }
+}
+
+.syncing-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Smooth input styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
