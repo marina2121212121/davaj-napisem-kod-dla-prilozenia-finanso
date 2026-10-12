@@ -1095,5 +1095,14 @@ function jsonParseSafe(str) {
   }
 }
 
+// Register Service Worker for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((err) => {
+      console.log('SW registration note:', err);
+    });
+  });
+}
+
 // Start application
 window.addEventListener('DOMContentLoaded', initApp);
