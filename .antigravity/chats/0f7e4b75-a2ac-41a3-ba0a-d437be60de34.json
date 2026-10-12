@@ -4,5 +4,18 @@
   "createdAt": "2026-10-12T14:51:23.870Z",
   "filename": "0f7e4b75-a2ac-41a3-ba0a-d437be60de34.json",
   "geminiStarted": false,
-  "messages": []
+  "messages": [
+    {
+      "id": "cc504447-179b-4b98-9ec5-499f7ccdbca5",
+      "role": "user",
+      "content": "Как перевести на русский?",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-10-12T15:08:52.911Z",
+      "sender": "ios",
+      "is_cancelled": false
+    }
+  ]
 }
